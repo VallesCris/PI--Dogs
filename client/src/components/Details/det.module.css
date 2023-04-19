@@ -1,0 +1,89 @@
+
+.container{
+    background-image: url(../Details/job562-nunoon-10.jpg);
+    height: 120vh;
+    background-size: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.containerS{
+  height: 120vh;
+  background-size: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 160px;
+}
+
+.h1{
+  margin-top: 80px;
+    font-size: 33px;
+    color: #1535B3;
+    padding: 15px;
+  }
+  
+.h3{
+   font-size: 15px;
+   color: #000000;
+    padding: 10px;
+}
+
+.h4{
+  font-size: 16px;
+  color: #000000;
+    padding: 10px;
+}
+
+.img{
+    align-items: center;
+    display: flex;
+    width: 620px;
+    height: 480px;
+    padding: 20px;
+    
+}
+
+
+.button {
+    padding: 33px;
+    font-size: 18px;
+    color:  #385FFF;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .button:focus,
+  .button:hover {
+    color: #c9ada7;
+  }
+  
+  .button:focus:after,
+  .button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #c9ada7;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }

@@ -1,0 +1,144 @@
+.container{
+
+    background-image: url(../DogCreate/job562-nunoon-10.jpg);
+    height: 100vh;
+    background-size: 190vh;
+    padding-top: 280px;
+    font-family: 'Alegreya ExtraBold', sans-serif;
+    color: #3d3a39;
+}
+
+.div2{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input{
+    margin: 15px;
+    padding-top: 10px;
+    padding: 5px;
+}
+
+.temps{
+    margin: 10px;
+    font-size: 25px; 
+    font-weight: 700;
+    color: #3d3a39;
+    align-items: center;
+}
+
+.h1{
+    font-family: 'Alegreya ExtraBold', monospace;
+    color: #945555;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.label{
+    margin: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    color: #3d3a39;
+}
+
+
+.check{
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin: 8px;
+    text-align: center;
+    color: #3d3a39;
+}
+
+.button {
+    padding: 25px;
+    font-size: 18px;
+    color: #945555;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .button:focus,
+  .button:hover {
+    color: #c9ada7;
+  }
+  
+  .button:focus:after,
+  .button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #c9ada7;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  .buttonB {
+    padding: 25px;
+    font-size: 18px;
+    color: #945555;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .buttonB:focus,
+  .buttonB:hover {
+    color: #c9ada7;
+  }
+  
+  .buttonB:focus:after,
+  .buttonB:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .buttonB:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #c9ada7;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+   
+.error{
+    background-color: #efedeb;
+    color: #ff002b;
+    font-weight: 500;
+}

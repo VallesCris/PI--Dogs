@@ -1,0 +1,17 @@
+.buttonPg{
+    font-family: 'Alegreya ExtraBold', sans-serif;
+    font-size: 20px;
+    background-color: #e7dad7;
+    border-color: #9a7d76;
+    border-radius: 3px;
+    color: #22223B;
+    margin: 4px;
+    }
+    
+    .buttonPg:hover{
+        background-color: #4A4E69;
+        border-color: #4A4E69;
+        border-radius: 4px;
+        color: #C9ADA7;
+        transition: 0.4s;
+    }

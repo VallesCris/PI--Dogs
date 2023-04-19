@@ -1,0 +1,62 @@
+.container{
+    background-image: url('../Home/OIU5WW1-01.jpg');
+    height: 185vh;
+    background-size: 250vh;
+    padding: 50px;
+    font-family: 'Poppins SemiBold', sans-serif;
+    
+}
+
+.tittle{
+    color: black;
+    font-family: 'Alegreya ExtraBold', sans-serif;
+    align-items: center;
+    padding: 25px;
+    font-size: 30px;
+}
+
+.botonNewDog{
+    justify-content: center;
+    padding: 5px;
+    font-size: 18px;
+    -webkit-text-stroke: 0.2px rgb(155, 155, 236);   
+    color: transparent;
+    color: #2f0707;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .botonNewDog:focus,
+  .botonNewDog:hover {
+    color: #bf3939;
+  }
+  
+  .botonNewDog:focus:after,
+  .botonNewDog:hover:after {
+    color: black;
+    width: 100%;
+    left: 0%;
+  }
+  
+  .botonNewDog:after {
+    color: black;
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
