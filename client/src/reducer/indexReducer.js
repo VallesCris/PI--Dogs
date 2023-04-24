@@ -38,11 +38,11 @@ export default function rootReducer(state = initialState, action){
                 ...state,
                 temperament: action.payload
             }
-            case TEMPERAMENT_FILTER:
-                const filterTemp = state.allDogs.filter(e => e.temperament.split(', ')?.some(r => r === action.payload))
+        case TEMPERAMENT_FILTER:
+            const filterTemp = state.allDogs.filter(e => e.temperament.split(', ')?.some(r => r === action.payload))
                 
-                return{
-                    ...state,
+            return{
+                ...state,
                 dogs: action.payload === 'all' ? state.allDogs : filterTemp
             }
             
@@ -121,3 +121,4 @@ export default function rootReducer(state = initialState, action){
                 }
             }
         };
+

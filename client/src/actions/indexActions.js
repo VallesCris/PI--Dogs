@@ -62,13 +62,12 @@ export function dogByName(name){
     }
 }
 
-//temp en el post
 export function getTemperaments(){
     return async function(dispatch){
         try{
-            const temp = axios.get(`http://localhost:3001/temperaments`)
+            const temp = await axios.get(`http://localhost:3001/temperaments`)
             return dispatch({
-                type: "GET_TEMP",
+                type: GET_TEMP,
                 payload: temp.data
             })
         } catch(error){

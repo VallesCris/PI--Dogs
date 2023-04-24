@@ -46,11 +46,17 @@ export default function DogCreate(){
     });
     const dispatch = useDispatch();
     const [errors, setErrors] = useState({});
+    const state = useSelector((state) => state)
+    // console.log("temps", state.temperament)
 
 
     useEffect(() => {
         dispatch(getTemperaments());
     },[dispatch]);
+
+
+
+
 
 
     function handleChange(e){
@@ -64,30 +70,25 @@ export default function DogCreate(){
             [e.target.name]: e.target.value
         }))
       };
-     
-      function handleSelect(e){ 
-          if(e.target.checked === true){
-            setNewDog({
-              ...newDog,
-              temperament: [...newDog.temperament,e.target.value]
-          });
-        } else {
-            setNewDog({
-                ...newDog,
-                temperament: newDog.temperament.filter(x =>{
-                    return e.target.value !== x
-                })
-            })
-        }
+
+      const handlerOnchangeTemp =  (e) => {
+  
+        if (newDog.temperament.includes(e.target.value)) return;
+        
+        setNewDog({
+          ...newDog,
+          [e.target.name]: [...newDog.temperament].concat(e.target.value),
+        });
+        let temps =  [...newDog.temperament].concat(e.target.value);
+        setErrors(
+          validation({
+            ...newDog,
+            [e.target.name]: temps ,
+          })
+        );
+      
       };
-
-      // function handleDelete(el) {
-      //   setNewDog({
-      //     ...newDog,
-      //     temperament: newDog.temperament.filter((temp) => temp !== el),
-      //   });
-      // };
-
+      
       function handleSubmit(e){
           e.preventDefault();
           if(newDog.minheight >= 0 && newDog.minweight >= 0 && parseInt(newDog.maxheight) >= parseInt(newDog.minheight) && parseInt(newDog.maxweight) >= parseInt(newDog.minweight) && newDog.name){
@@ -167,8 +168,17 @@ export default function DogCreate(){
 
 
             <label className={dg.temps}>Temperamentos:</label>
-            <div className={dg.div2}>
-                {/* pendiente */}
+            <div className = {dg.div2}>
+                <h3>TEMPERAMENTS</h3>
+                <select onChange={handlerOnchangeTemp} >
+                    {
+                        state?.temperament?.map(e => {
+                            return (
+                                <option value={e.name} key={e.id}>{e.name}</option>
+                                )
+                            })
+                        }
+                </select>
             </div>
             
                 <br /><br />
