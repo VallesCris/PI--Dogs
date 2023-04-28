@@ -15,7 +15,7 @@
     font-size: 30px;
 }
 
-.botonNewDog{
+.botoninput{
     justify-content: center;
     padding: 5px;
     font-size: 18px;
@@ -34,19 +34,19 @@
     transition-property: color;
   }
   
-  .botonNewDog:focus,
-  .botonNewDog:hover {
+  .botoninput:focus,
+  .botoninput:hover {
     color: #bf3939;
   }
   
-  .botonNewDog:focus:after,
-  .botonNewDog:hover:after {
+  .botoninput:focus:after,
+  .botoninput:hover:after {
     color: black;
     width: 100%;
     left: 0%;
   }
   
-  .botonNewDog:after {
+  .botoninput:after {
     color: black;
     content: "";
     pointer-events: none;

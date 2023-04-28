@@ -40,7 +40,6 @@ export default function DogsDetails(){
 
                         <h4 className={det.h4}>Temperamento: {dogDetail.temperament}</h4>
                 
-                        {/* <h4>Temperamento: {dogDetail.temperament.length === 0 ? "No se han indicado dietas" : !dogDetail[0].createdInDb ? dogDetail[0].temperament + "" : dogDetail[0].temperament.map((d) => d.name + (' '))}</h4>  */}
 
                         <img className={det.img} src={dogDetail.image}/>
 

@@ -33,7 +33,6 @@ const getDbInfo = async()=>{
             }   
         },
     })
-
     //console.log('dogs', dogsO)
     return dogsO.map(e =>{
         return{
@@ -44,6 +43,7 @@ const getDbInfo = async()=>{
             height: {metric: e.height},
             lifeSpan: e.lifeSpan,
             image: e.image,
+            createdInDb: e.createdInDb
         }
     })
 }

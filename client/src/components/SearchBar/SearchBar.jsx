@@ -27,7 +27,7 @@ export default function SearchBar(){
     return(
         <React.Fragment>
             <input value={name} type="text" placeholder="Busca aqui" onChange={(e)=> handleInputChange(e)}/>
-            <button className={hm.botonNewDog} type="submit" onClick={(e)=> handleSubmit(e)}>Buscar</button>
+            <button className={hm.botoninput} type="submit" onClick={(e)=> handleSubmit(e)}>Buscar</button>
         </React.Fragment>
     )
 

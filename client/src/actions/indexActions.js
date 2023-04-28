@@ -85,12 +85,12 @@ export function postDog(payload){
 }
 
 //filter db and api
-export const filterCreated = (payload) =>{
-    return{
+export const filterCreated = (payload) => {
+    return {
         type: FILTER_CREATED,
         payload
     }
-}
+};
 
 //Alphabetic sort 
 export function alphabeticSort(payload){

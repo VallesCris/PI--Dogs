@@ -46,23 +46,29 @@ export default function rootReducer(state = initialState, action){
                 dogs: action.payload === 'all' ? state.allDogs : filterTemp
             }
             
-
             /*FILTRO PENDIENTE*/
+            // case FILTER_CREATED:
+            //     let dogCopy = state.allDogs;
+            //     let createdFiltered;
+            //     if(action.payload === 'created') {
+            //         createdFiltered = dogCopy.filter(e => e.createdInDb)
+            //     } else if (action.payload === 'api') {
+            //         createdFiltered = dogCopy.filter(e => !e.createdInDb)
+            //     } else {
+            //         createdFiltered = dogCopy
+            //     }
+            //     return {
+            //         ...state,
+            //         dogs: createdFiltered
+            //     }; 
             case FILTER_CREATED:
-                let dogCopy = state.allDogs;
-                let createdFiltered;
-                if(action.payload === 'created'){
-                    createdFiltered = dogCopy.filter(e => e.createdInDb)
-                } else if (action.payload === 'api') {
-                    createdFiltered = dogCopy.filter(e => !e.createdInDb)
-                } else {
-                    createdFiltered = dogCopy
-                } 
+                const allDogs = state.allDogs;
+                const filterCreated = action.payload === 'created' ? allDogs.filter(d => d.createdInDb) : allDogs.filter(d => !d.createdInDb)
                 return {
-                    ...state,
-                    dogs: createdFiltered
-                }
-                
+                  ...state,
+                  dogs: action.payload === 'all' ? state.allDogs : filterCreated
+                };
+        
             case ALPHABETIC_SORT:
                 const array = action.payload === "asc" ? state.allDogs.sort(function(a, b){
                     if(a.name > b.name){

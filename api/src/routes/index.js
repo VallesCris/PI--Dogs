@@ -48,7 +48,7 @@ router.get("/dogs/:id", async(req, res, next) =>{
 
 router.post('/dogs', async(req, res, next)=>{
     try {
-        const {name, minheight, maxheight, minweight, maxweight, minlife_span, maxlife_span, image, temperament} = req.body
+        const {name, minheight, maxheight, minweight, maxweight, minlife_span, maxlife_span, image, temperament, createdInDb} = req.body
         //console.log(req.body)
         let id = Math.floor(Math.random()*12345)
         if(name && minheight && maxheight && minweight && maxweight && maxlife_span && minlife_span && temperament && image  ){
@@ -59,7 +59,7 @@ router.post('/dogs', async(req, res, next)=>{
             height: maxheight - minheight,
             weight: maxweight - minweight,
             lifeSpan: maxlife_span - minlife_span,
-            createInDb: true,
+            createdInDb,
         })
         if(dogCreated){
             temperament.forEach(async (e) => {
